@@ -1,0 +1,32 @@
+<div ng-controller="DropdownCtrl">
+    <div class="btn-group  btn-group-justified">
+            <div class="btn-group btn-block">
+                <button id="dateBtn" class="btn btn-default btn-block" dropdown data-toggle="dropdown">
+                    {{item.date.showname}} <span class="caret">
+                </button>
+                <div aria-labelledby="dateBtn">
+                    选择日期
+                </div>
+            </div>
+
+            <div class="btn-group btn-block">
+                <button id="typeBtn" class="btn btn-default btn-block" dropdown data-toggle="dropdown">
+                    {{item.type.showname}} <span class="caret">
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="typeBtn">
+                    <li ng-repeat="type in item.type.alltypes">
+                        <a href="#" ng-click="chooseType(type.typeId,type.name)">{{type.name}}</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btn-group btn-block">
+                <button id="postionBtn" class="btn btn-default btn-block" dropdown data-toggle="dropdown">
+                    {{item.position.showname}} <span class="caret">
+                </button>
+                <div aria-labelledby="postionBtn">
+                    选择日期
+                </div>
+            </div>
+    </div>
+</div>

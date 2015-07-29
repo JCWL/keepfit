@@ -1,0 +1,26 @@
+<div ng-controller="VenueListCtrl">
+    <div ng-repeat="venue in venues">
+        <div ui-sref="venuedetail({venueId:venue.id})">
+            <div class="panel">
+                <div width="100%" height="200px">
+                    <img src="{{venue.picSrc}}">
+                </div>
+                <div>
+                    {{venue.name}}
+                </div>
+                <div>
+                    <i class="icon ion-ios-location-outline"></i>{{venue.position}}
+                </div>
+                <div>
+                    <i class="icon ion-android-time"></i>{{venue.time}}
+                    {{venue.price}}
+                </div>
+            </div>
+        </div>
+     <!--        场地:{{venue.name}}<br>
+            位置:{{venue.position}}<br>
+            时间:{{venue.time}}<br>
+            价格:{{venue.price}}<br>
+            等级:{{venue.rate}}<br></a> -->
+    </div>
+</div>
