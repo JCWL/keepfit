@@ -1,5 +1,20 @@
-<div class="well" >
-<!-- <div class="well" ng-controller="BookDetailCtrl"> -->
+<div class="well" ng-controller="venueDetailCtrl">
+<!-- 轮播图 -->
+    <div>
+        <carousel interval="myInterval">
+            <slide ng-repeat="resource in venue.resources" active="slide.active">
+                <img ng-src="{{resource.image}}" style="margin:auto; height:250px">
+                <div class="carousel-caption">
+                    <p>{{resource.text}}</p>
+                </div>
+            </slide>
+        </carousel>
+    </div>
+    <ul>
+      <li>{{venue.name}}</li>
+      <li>{{venue.time}}</li>
+      <li>仅剩{{venue.availableSeats}}席|可容纳{{venue.capacity}}人</li>
+    </ul>
     <div class="row">
             <div class="row">
                 <div class="col-md-6">
@@ -9,7 +24,5 @@
                     <a ui-sref="order" class="btn btn-primary">提交订单</a>
                 </div>
             </div>
-        显示场馆详情
-
     </div>
 </div>

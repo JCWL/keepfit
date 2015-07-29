@@ -1,12 +1,12 @@
 myApp.controller('VenueListCtrl', ['$scope', 'loadDataService',
     function($scope, loadDataService) {
-        loadDataService.venueList('ss').success(function(data, status) {
+        loadDataService.venueList('ss').success(function (data, status) {
             $scope.venues = data;
         });
     }
 ]);
 
-myApp.controller('DropdownCtrl', function ($scope, $log,$templateCache, loadDataService) {
+myApp.controller('DropdownCtrl', function ($scope, $log, $templateCache, loadDataService) {
 
         $templateCache.removeAll();
 
@@ -29,4 +29,15 @@ myApp.controller('DropdownCtrl', function ($scope, $log,$templateCache, loadData
         }
     }
 );
+
+myApp.controller('venueDetailCtrl', function ($scope, $log, $templateCache, loadDataService){
+    $templateCache.removeAll();
+
+    loadDataService.venue('id').success(function (data, status){
+        $scope.venue = data;
+        // 设置轮播图图片间隔
+        $scope.myInterval = 1000;
+    });
+
+});
 

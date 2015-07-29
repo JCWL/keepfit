@@ -29,7 +29,7 @@ myApp.factory('loadDataService',  ['$http',
             },
             // 加载场馆信息
             venue: function(venueId) {
-                return doRequest(venueId, 'data/list1.json');
+                return doRequest(venueId, 'data/detail.json');
             },
             // 所有类型列表
             types: function(){
