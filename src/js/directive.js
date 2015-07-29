@@ -1,13 +1,13 @@
-myApp.directive("venueitem", function() {
+myApp.directive("myrating", function() {
     return {
         restrict: 'AE',
         scope:{
-            venueInfo:'@'
+            rate:'@'
         },
-        templateUrl: 'tpls/list-item.html',
+        template: 'hello',
         replace: true,
-        link: function () {
-            // body...
+        link: function (rate) {
+            // if (rate) {alert(rate)};
         }
     }
 });
