@@ -10,8 +10,6 @@
     "price":"35",
     "availableSeats":2,
     "capacity":10,
-    "longitude":121.594061,
-    "latitude":31.207879,
     "resources": [
     	{"image":"http://jcwl.me/images/general-nature/1w.jpg",
     	 "text":"主场馆"},
