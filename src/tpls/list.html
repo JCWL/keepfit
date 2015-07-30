@@ -1,10 +1,9 @@
 <div ng-controller="VenueListCtrl">
     <div ng-repeat="venue in venues">
-        <div ui-sref="venuedetail({venueName:venue.showname,venueId:venue.id})"
-          href="/venuede/">
+        <div ui-sref="venuedetail({venueId:venue.id})">
             <div class="panel">
                 <div>
-                    <img ng-src="{{venue.picSrc}}" class="img-rounded" width="100%" height="200px">
+                    <img ng-src="{{venue.picSrc}}" class="img-rounded" width="100%" height="200px" ng-style="border:2px">
                 </div>
                 <div class="row">
                     <div class="col-xs-6">
@@ -12,7 +11,7 @@
                     </div>
                     <div class="col-xs-6 text-right">
                         
-                        <!-- <span ng-repeat=" in venue.rate"><i class="icon ion-android-star"></i></span> -->
+                        <span ng-repeat=" in venue.rate"><i class="icon ion-android-star"></i></span>
                         <i class="icon ion-android-star"></i>
                          ({{venue.rate}})
                         <!-- ion-android-star  ion-android-star-outline -->
