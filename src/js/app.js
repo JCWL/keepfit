@@ -43,6 +43,9 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
         }).state('order', {
             url: '/order/:venueId',
             templateUrl: 'tpls/order.html'
+        }).state('map', {
+            url: '/venuedetail/map/:lat',
+            templateUrl: 'tpls/map.html'
         });
 
 });
