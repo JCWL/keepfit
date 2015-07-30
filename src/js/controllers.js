@@ -58,8 +58,8 @@ myApp.controller('baiduMapCtrl', function ($scope, $document) {
         //     map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
         // };
 
-        // var longitude = 113.738487;
-        // var latitude = 34.361282;
+        $scope.longitude = 113.738487;
+        $scope.latitude = 34.361282;
         // $scope.mapOptions = {
         //     center: {
         //         longitude: longitude,
