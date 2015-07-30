@@ -30,10 +30,11 @@ myApp.controller('DropdownCtrl', function ($scope, $log, $templateCache, loadDat
     }
 );
 
-myApp.controller('venueDetailCtrl', function ($scope, $log, $templateCache, loadDataService){
-    $templateCache.removeAll();
+myApp.controller('venueDetailCtrl', function ($scope, $log, $templateCache, $state, $stateParams, loadDataService){
+    $log.log("传来的参数：" + angular.toJson($stateParams, true)  + "；路由：" + angular.toJson($state.current, true));
 
-    loadDataService.venue('id').success(function (data, status){
+    loadDataService.venue($stateParams.venueId)
+    .success(function (data, status){
         $scope.venue = data;
         // 设置轮播图图片间隔
         $scope.myInterval = 1000;
