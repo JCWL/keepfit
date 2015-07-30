@@ -6,7 +6,7 @@ myApp.controller('VenueListCtrl', ['$scope', 'loadDataService',
     }
 ]);
 
-myApp.controller('DropdownCtrl', function ($scope, $log, $templateCache, loadDataService) {
+myApp.controller('DropdownCtrl', function ($scope, $log, $templateCache, loadDataService,settingsService) {
 
         $templateCache.removeAll();
 
@@ -30,8 +30,17 @@ myApp.controller('DropdownCtrl', function ($scope, $log, $templateCache, loadDat
     }
 );
 
-myApp.controller('venueDetailCtrl', function ($scope, $log, $templateCache, $state, $stateParams, loadDataService){
+myApp.controller('venueDetailCtrl', function ($scope, $log, $templateCache, $state, $stateParams, loadDataService,settingsService){
+
     $log.log("传来的参数：" + angular.toJson($stateParams, true)  + "；路由：" + angular.toJson($state.current, true));
+
+    $scope.showmap = function () {
+        settingsService.set('lat', 34.361282);
+        settingsService.set('lng', 113.738487);
+        $log.log(settingsService.get('lng'),";",settingsService.get('lat'));
+        $state.go('map');
+    }
+
 
     loadDataService.venue($stateParams.venueId)
     .success(function (data, status){
@@ -43,7 +52,7 @@ myApp.controller('venueDetailCtrl', function ($scope, $log, $templateCache, $sta
 });
 
 
-myApp.controller('baiduMapCtrl', function ($scope, $document) {
+myApp.controller('baiduMapCtrl', function ($scope, $document, settingsService) {
         /*
         百度地图坐标查询:
         http://api.map.baidu.com/lbsapi/getpoint/
@@ -58,8 +67,9 @@ myApp.controller('baiduMapCtrl', function ($scope, $document) {
         //     map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
         // };
 
-        $scope.longitude = 113.738487;
-        $scope.latitude = 34.361282;
+        $scope.longitude = settingsService.get('lng');
+        $scope.latitude = settingsService.get('lat');
+        $log.log($scope.longitude ,";",$scope.latitude );
         // $scope.mapOptions = {
         //     center: {
         //         longitude: longitude,
