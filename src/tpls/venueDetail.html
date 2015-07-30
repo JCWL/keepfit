@@ -10,10 +10,20 @@
             </slide>
         </carousel>
     </div>
-    <ul>
+
+    <ul class="list-group">
+      <li class="list-group-item">仅剩<span class="label label-danger">{{venue.availableSeats}}</span>席|可容纳<span class="label label-default">{{venue.capacity}}</span>人</li>
+    </ul>
+
+    <div class="list-group">
+      <a href="#" class="list-group-item"><div class="icon ion-android-time">&nbsp;&nbsp;时间</div></a>
+      <a ui-sref="map" class="list-group-item"><div class="icon ion-android-time">&nbsp;&nbsp;详细位置／距离</div></a>
+      <a href="tel:{{venue.tel}}" class="list-group-item"><div class="icon ion-android-time">&nbsp;&nbsp;电话</div></a>
+    </div>
+    <ul>  
+      <li>仅剩{{venue.availableSeats}}席|可容纳{{venue.capacity}}人</li>
       <li>{{venue.name}}</li>
       <li>{{venue.time}}</li>
-      <li>仅剩{{venue.availableSeats}}席|可容纳{{venue.capacity}}人</li>
     </ul>
     <div class="row">
             <div class="row">
@@ -25,4 +35,33 @@
                 </div>
             </div>
     </div>
+
+    <!-- 简介 -->
+   <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          简介
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+
+
+    <div id="footer" class="container">
+      <nav class="navbar navbar-default navbar-fixed-bottom">
+          <div class="navbar-inner ">
+              <p class="text-muted credit" style="padding: 10px;">
+                  ¥100元
+              </p>
+              <button type="button" class="btn btn-default">现在预约</button>
+          </div>
+      </nav>
+    </div>
+
 </div>
