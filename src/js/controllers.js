@@ -48,36 +48,8 @@ myApp.controller('baiduMapCtrl', function ($scope, $document) {
         百度地图坐标查询:
         http://api.map.baidu.com/lbsapi/getpoint/
         */
-
-        // var map;
-        // window.onload = function() {
-        //     map = new BMap.Map("allmap");    // 创建Map实例
-        //     map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
-        //     map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-        //     map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-        //     map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-        // };
-
-        $scope.longitude = 113.738487;
-        $scope.latitude = 34.361282;
-        // $scope.mapOptions = {
-        //     center: {
-        //         longitude: longitude,
-        //         latitude: latitude
-        //     },
-        //     zoom: 15,
-        //     city: 'Xinzheng',
-        //     markers: [{
-        //         longitude: longitude,
-        //         latitude: latitude,
-        //         icon: 'http://img.coolwp.com/wp-content/uploads/2015/04/48-map-marker.png',
-        //         width: 48,
-        //         height: 48,
-        //         title: '在哪儿',
-        //         content: '新郑市梨河镇'
-        //     }]
-        // };
-       
-
+        $scope.lng = 121.594061;
+        $scope.lat = 31.207879;
+        
 });
 
