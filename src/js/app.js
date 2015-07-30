@@ -44,7 +44,7 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
             url: '/order/:venueId',
             templateUrl: 'tpls/order.html'
         }).state('map', {
-            url: '/venuedetail/map',
+            url: '/venuedetail/map/:lat',
             templateUrl: 'tpls/map.html'
         });
 
