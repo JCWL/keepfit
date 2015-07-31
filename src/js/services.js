@@ -33,7 +33,11 @@ myApp.factory('loadDataService',  ['$http',
             },
             // 所有类型列表
             types: function(){
-                return doRequest('', 'data/types.json')
+                return doRequest('', 'data/types.json');
+            },
+            // 所有地区列表
+            area: function(){
+                return doRequest('', 'data/area.json');
             }
         };
     }

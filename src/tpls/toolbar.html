@@ -24,9 +24,14 @@
                 <button id="postionBtn" class="btn btn-default btn-block" dropdown data-toggle="dropdown">
                     {{item.position.showname}} <span class="caret">
                 </button>
-                <div class="dropdown-menu" aria-labelledby="postionBtn">
+                <!-- <div class="dropdown-menu" aria-labelledby="postionBtn">
                     选择日期
-                </div>
+                </div> -->
+                <ul class="dropdown-menu" aria-labelledby="areaBtn">
+                    <li ng-repeat="area in item.position.allPosition">
+                        <a href="#" ng-click="chooseArea(area.areaId,area.name)">{{area.name}}</a>
+                    </li>
+                </ul>
             </div>
     </div>
 </div>

@@ -22,10 +22,23 @@ myApp.controller('DropdownCtrl', function ($scope, $log, $templateCache, loadDat
             $scope.item.type.showid = data[0].typeId;
         });
 
+        loadDataService.area().success(function(data, status) {
+            $scope.item.position.allPosition = data;
+            $scope.item.position.showname = data[0].name;
+            $scope.item.position.showid = data[0].areaId
+            
+        });
+
         $scope.chooseType = function (id, name) {
             $scope.item.type.showname = name;
             $scope.item.type.showid = id;
             $log.log('current type : [', $scope.item.type.showid , ',' , $scope.item.type.showname, ']');
+        }
+
+        $scope.chooseArea = function (id, name) {
+            $scope.item.position.showname = name;
+            $scope.item.position.showid = id;
+            $log.log('current area : [', $scope.item.position.showid , ',' , $scope.item.position.showname, ']');
         }
     }
 );

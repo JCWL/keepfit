@@ -1,0 +1,17 @@
+[{
+    "areaId": "1",
+    "areaCode":"NEARBY",
+    "name": "附近"
+}, {
+    "areaId": "2",
+    "areaCode":"HOT",
+    "name": "热门地区"
+}, {
+    "areaId": "3",
+    "areaCode":"PUDONG",
+    "name": "浦东新区"
+}, {
+    "areaId": "4",
+    "areaCode":"HUANGPU",
+    "name": "黄浦区"
+}]
